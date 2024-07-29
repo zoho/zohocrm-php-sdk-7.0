@@ -3,7 +3,7 @@
 The PHP SDK for Zoho CRM allows developers to easily create client PHP applications that can be integrated with Zoho CRM. This SDK serves as a wrapper for the REST APIs, making it easier to access and utilize the services of Zoho CRM. 
 Authentication to access the CRM APIs is done through OAuth2.0, and the authentication process is streamlined through the use of the PHP SDK. The grant and access/refresh tokens are generated and managed within the SDK code, eliminating the need for manual handling during data synchronization between Zoho CRM and the client application.
 
-This repository includes the PHP SDK for API v6 of Zoho CRM. Check [Versions](https://github.com/zoho/zohocrm-php-sdk-7.0/releases) for more details on the versions of SDK released for this API version.
+This repository includes the PHP SDK for API v7 of Zoho CRM. Check [Versions](https://github.com/zoho/zohocrm-php-sdk-7.0/releases) for more details on the versions of SDK released for this API version.
 
 License
 =======
