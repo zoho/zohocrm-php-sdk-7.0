@@ -264,15 +264,18 @@ class JSONConverter extends Converter
         {
             foreach ($moduleDetail as $keyName => $keyDetail)
 			{
-			    $name = $keyDetail[Constants::NAME];
-			    if ($keyDetail != null && array_key_exists(Constants::REQUIRED, $keyDetail) && $keyDetail[Constants::REQUIRED] == true)
-				{
-				    $requiredKeys[$name] = 1;
-				}
-				if ($keyDetail != null && array_key_exists(Constants::PRIMARY, $keyDetail) && $keyDetail[Constants::PRIMARY] == true)
-				{
-				    $primaryKeys[$name] = 1;
-				}
+			    if($keyDetail != null && array_key_exists(Constants::NAME, $keyDetail))
+                {
+                    $name = $keyDetail[Constants::NAME];
+                    if ($keyDetail != null && array_key_exists(Constants::REQUIRED, $keyDetail) && $keyDetail[Constants::REQUIRED] == true)
+                    {
+                        $requiredKeys[$name] = 1;
+                    }
+                    if ($keyDetail != null && array_key_exists(Constants::PRIMARY, $keyDetail) && $keyDetail[Constants::PRIMARY] == true)
+                    {
+                        $primaryKeys[$name] = 1;
+                    }
+                }
             }
 			foreach ($classDetail as $keyName => $keyDetail)
 			{
@@ -331,7 +334,7 @@ class JSONConverter extends Converter
 
             if($keyValue != null)
             {
-                if (sizeof($keyDetail) > 0)
+                if ($keyDetail != null && sizeof($keyDetail) > 0)
                 {
                     if ((array_key_exists(Constants::READ_ONLY, $keyDetail) && ($keyDetail[Constants::READ_ONLY] == true)) || ! array_key_exists(Constants::NAME, $keyDetail))// read only or no keyName
                     {
@@ -344,6 +347,11 @@ class JSONConverter extends Converter
                 }
                 else
                 {
+                    if($keyDetail == null || sizeof($keyDetail) == 0)
+                    {
+                        $keyDetail = array();
+                        $customHandling = true;
+                    }
                     if ($customHandling && !(is_array($keyValue)) && !(gettype($keyValue) == Constants::MAP_NAMESPACE) && !($keyValue instanceof Choice))
                     {
                         if ($keyValue instanceof \DateTime )

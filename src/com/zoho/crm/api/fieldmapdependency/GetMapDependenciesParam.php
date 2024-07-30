@@ -21,9 +21,4 @@ class GetMapDependenciesParam
 		return new Param('filters', 'com.zoho.crm.api.FieldMapDependency.GetMapDependenciesParam'); 
 
 	}
-	public static final function layoutId()
-	{
-		return new Param('layout_id', 'com.zoho.crm.api.FieldMapDependency.GetMapDependenciesParam'); 
-
-	}
 } 
