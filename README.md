@@ -28,7 +28,7 @@ License
 
 - [3.1.0](/versions/3.1.0/README.md)
 
-  - FileStore class issue fixed.
+  - OAuthToken class issue fixed.
 
 - [3.0.0](/versions/3.0.0/README.md)
 
