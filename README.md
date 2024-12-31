@@ -26,6 +26,10 @@ License
 
 ## Latest Version
 
+- [3.1.0](/versions/3.1.0/README.md)
+
+  - FileStore class issue fixed.
+
 - [3.0.0](/versions/3.0.0/README.md)
 
   - Handled FileStore save and update token method issue.
@@ -55,10 +59,10 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-php-sdk-7.0/r
 
 ## Including the SDK in your project
 You can include the SDK to your project using Composer.
-For installing the latest [version](https://github.com/zoho/zohocrm-php-sdk-7.0/releases/tag/3.0.0) of PHP SDK, navigate to the workspace of your client app and run the following command.
+For installing the latest [version](https://github.com/zoho/zohocrm-php-sdk-7.0/releases/tag/3.1.0) of PHP SDK, navigate to the workspace of your client app and run the following command.
 
 ```sh
-composer require zohocrm/php-sdk-7.0:3.0.0
+composer require zohocrm/php-sdk-7.0:3.1.0
 ```
 With this, the PHP SDK will be installed and a package named vendor will be created in the workspace of your client app.
 
@@ -77,4 +81,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer here. [here](/versions/3.0.0/README.md).
+For more details, kindly refer here. [here](/versions/3.1.0/README.md).
